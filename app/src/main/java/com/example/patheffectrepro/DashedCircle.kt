@@ -31,6 +31,8 @@ fun DashedCircle(
     val strokeWidth = with (AmbientDensity.current) { strokeWidthDp.toPx() }
     Box(modifier.drawWithCache {
         val pathEffect: PathEffect = PathEffect.dashPathEffect(pathEffectIntervals, 1f)
+        val start = Offset(size.width / 2, size.height / 2)
+        val end = Offset(size.width, size.height / 2)
 
         onDrawWithContent {
             drawCircle(
@@ -42,8 +44,8 @@ fun DashedCircle(
             )
             drawLine(
                 color = strokeColor,
-                start = Offset(size.width / 2, size.height / 2),
-                end = Offset(size.width, size.height / 2)
+                start = start,
+                end = end
             )
         }
     })
