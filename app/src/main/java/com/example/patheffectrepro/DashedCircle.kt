@@ -39,7 +39,7 @@ fun DashedCircle(
                 strokeColor,
                 style = Stroke(
                     width = strokeWidth,
-                    pathEffect = null
+//                    pathEffect = pathEffect
                 )
             )
             drawLine(
